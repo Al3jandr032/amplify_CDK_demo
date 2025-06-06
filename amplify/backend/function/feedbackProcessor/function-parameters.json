@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "storage": {
+      "Feedback:@model(appsync)": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

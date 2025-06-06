@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "notificationdemo",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authnotificationdemod842e23c",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
