@@ -1,0 +1,5 @@
+node_modules
+dist
+build
+amplify/#current-cloud-backend
+amplify/backend

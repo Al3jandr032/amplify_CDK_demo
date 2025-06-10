@@ -12,7 +12,16 @@
       ],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2025-06-16T23:02:31.616Z",
+                "apiKeyExpirationDays": 7,
+                "description": ""
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
@@ -49,6 +58,23 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "custom": {
+    "customEventbridge": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIKeyOutput",
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "notificationdemo"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "customCDK"
     }
   },
   "function": {
