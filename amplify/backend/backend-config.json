@@ -71,6 +71,17 @@
           ],
           "category": "api",
           "resourceName": "notificationdemo"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "Region",
+            "LambdaExecutionRole",
+            "LambdaExecutionRoleArn"
+          ],
+          "category": "function",
+          "resourceName": "feedbackProcessor"
         }
       ],
       "providerPlugin": "awscloudformation",
